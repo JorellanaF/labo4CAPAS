@@ -12,23 +12,23 @@
             <!--/*@thymesVar id="producto" type="com.example.labo4capas.domain.Producto"*/-->
             <form th:action="@{/formProducto}" th:object="${producto}" method="post">
                 <div class="row">
-                    <label class="col-4 text-dark">Nombre del producto: </label>
+                    <label class="col-5 text-dark">Nombre del producto: </label>
                     <input class="col-6" type="text" th:field="${producto.nombre}">
                     <span th:errors="*{nombre}" style="color: #E81505;"></span><br>
                 </div>
                 <div class="row">
-                    <label class="col-4 text-dark">Descripcion del producto: </label>
+                    <label class="col-5 text-dark">Descripcion del producto: </label>
                     <input class="col-6" type="text" th:field="${producto.descripcion}">
                     <span th:errors="*{descripcion}" style="color: #E81505;"></span><br>
                 </div>
                 <div class="row">
-                    <label class="col-4 text-dark">Precio del producto: </label>
+                    <label class="col-5 text-dark">Precio del producto: </label>
                     <input class="col-6" type="number" th:field="${producto.precio}">
                     <span th:errors="*{precio}" style="color: #E81505;"></span><br>
                 </div>
 
                 <div class="row">
-                    <label class="col-4 text-dark">Fecha de vencimiento del producto: </label>
+                    <label class="col-5 text-dark">Fecha de vencimiento del producto: </label>
                     <input class="col-6" type="text" th:field="${producto.vencimiento}">
                     <span th:errors="*{vencimiento}" style="color: #E81505;"></span><br>
                 </div>

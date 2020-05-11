@@ -7,7 +7,7 @@
 <body>
     <form th:action="@{/seguridad}" th:object="${robot}" method="post">
         <div class="row">
-            <label class="col-4">Marcar solo si usted es un robot</label>
+            <label class="col-5">Marcar solo si usted es un robot</label>
             <input class="col-6" type="radio" th:field="*{soyRobot}" th:value="${false}">
             <span th:errors="*{soyRobot}" style="color: #E81505"></span><br>
         </div>
