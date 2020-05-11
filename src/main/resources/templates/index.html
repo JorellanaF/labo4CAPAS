@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="h-100 justify-content-center ">
+    <div class="container h-100 justify-content-center ">
+        <div class="container progress-bar progress-bar-striped bg-info justify-content-center h-100">
+            <h1 class="text-dark">Ingresar producto</h1>
+            <!--/*@thymesVar id="producto" type="com.example.labo4capas.domain.Producto"*/-->
+            <form th:action="@{/formProducto}" th:object="${producto}" method="post">
+                <div class="row">
+                    <label class="col-4 text-dark">Nombre del producto: </label>
+                    <input class="col-6" type="text" th:field="${producto.nombre}">
+                    <span th:errors="*{nombre}" style="color: #E81505;"></span><br>
+                </div>
+                <div class="row">
+                    <label class="col-4 text-dark">Descripcion del producto: </label>
+                    <input class="col-6" type="text" th:field="${producto.descripcion}">
+                    <span th:errors="*{descripcion}" style="color: #E81505;"></span><br>
+                </div>
+                <div class="row">
+                    <label class="col-4 text-dark">Precio del producto: </label>
+                    <input class="col-6" type="number" th:field="${producto.precio}">
+                    <span th:errors="*{precio}" style="color: #E81505;"></span><br>
+                </div>
+
+                <div class="row">
+                    <label class="col-4 text-dark">Fecha de vencimiento del producto: </label>
+                    <input class="col-6" type="text" th:field="${producto.vencimiento}">
+                    <span th:errors="*{vencimiento}" style="color: #E81505;"></span><br>
+                </div>
+
+
+                <input type="submit" value="Agregar producto">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
